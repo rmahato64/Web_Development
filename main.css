@@ -1,0 +1,56 @@
+*{
+    padding:none;
+}
+
+body{
+    background-color: darkgrey;
+    font-size: 18px;
+}
+section{
+    padding: 10px 30px;
+}
+
+input{
+    background: lightseagreen;
+    
+}
+
+.header-item{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid green;
+    text-align: center;
+    line-height: 100px;
+    border-radius:75%;
+    margin: 0 50px;
+    
+}
+#item-one{
+    background-color: red;
+}
+#item-two{
+    background-color: green;
+}
+#item-three{
+    background-color: indigo;
+}
+
+span{
+    display:inline-block;
+    width: 110px;
+    height: 100px;
+    background-color: khaki;
+}
+
+/*legend{
+    text-align: center;
+}
+
+h1{
+    color: blue;
+}
+textarea{
+    resize: none;
+}
+*/
