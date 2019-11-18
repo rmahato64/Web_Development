@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First Html calss</title>
+    
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+</head>
+<body>
+    <header>
+        <h1>Lets start HTML</h1>
+
+        <span>span1</span>
+        <span>span2</span>
+<br>
+        <div class="header-item" id="item-one" >one</div>
+        <div class="header-item" id="item-two">two</div>
+        <div class="header-item" id="item-three">three</div>
+        <article>
+            <p>Lipsum dolor sit amet consectetur adipisicing elit. Unde alias aspernatur corporis nulla debitis tenetur dolore nostrum quisquam, eveniet et mollitia! Labore, fuga. Inventore atque est sit corrupti delectus minima.</p>
+            <ul>
+                <li>Frontend Technology
+                    <ol>
+                       <a href="#HTML" target="_blank"> <li>HTML</li></a>
+                        <li>CSS</li>
+                        <li>JS</li>
+                    </ol>
+                </li>
+                <li>Backend
+                    <ol>
+                      <a href="#PHP" target="_blank"><li>PHP</li></a>  
+                        <li>NODE</li>
+                        <li>PYTHON</li>
+                    </ol>
+                <li>Database
+                    <ol>
+                        <li>SQL</li>
+                        <li>NOSQL</li>
+                        <li>SOMTHNG</li>
+                    </ol>
+
+                </li>        
+                    
+
+                </li>
+            </ul>
+        </article>
+    </header>
+
+
+    <section>
+
+        <img src="./Files/Images/background.jpg" width="300px" >
+<br>
+
+        <video src="./Files/Videoe/mov_bbb.mp4" controls>This is how video can be displayed</video><br>
+        <audio controls>
+
+            <source src="./Files/audios/horse.ogv" type="audio/ogg">
+        </audio>
+    </section>
+    
+
+<details>
+    <summary>
+        <ul>
+            <li>Hello</li>
+            <li>MOI!</li>
+            <li>TACK!</li>
+        </ul>
+    </summary>
+</details>
+
+<fieldset>
+    <legend>Application form</legend>
+        <form method="" >
+                <div>
+                    <label for="firstname">Firstname</label>
+                    <input id="firstname" name="Firstname"  type="text" required minlength="3" maxlength="10" >
+                </div>
+            
+                <div>
+                        <label for="lastname">Lastname</label>
+                        <input id="lastname" name="Lastname"  type="text" placeholder="Last Name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+            
+                <div>
+                        <label for="age">Age</label>
+                        <input id="dateofbirth" name="age"  type="date" required> 
+                </div>
+                <div>
+                        <label for="color">COLORS</label>
+                        <input id="color" name="colors"  type="color" required>
+                </div>
+                <div>
+                    <label for="linkedin">linkedin</label>
+                    <input type="url" id="linkedin" name="linkedin">
+                </div>
+                <div>
+                    <label for="git">GITHUB</label>
+                    <input type="url" id="git" name="git">
+                    
+                </div>
+            
+                <div>
+            
+                    <h3>Select your skills</h3>
+                        <input type="checkbox" id="html">
+                        <label for="html" >HTML</label>
+                        <br>
+            
+                        <input type="checkbox" id="CSS" name="css">
+                        <label for="css">CSS</label>
+            
+                        <br>
+            
+                        <input type="checkbox" id="JS" name="JS">
+                        <label for="JS">JS</label>
+            
+                        <br>
+            
+                        <input type="checkbox" id="React">
+                        <label for="React" >HTML</label>
+            
+            
+                </div>
+                
+                <div>
+                        <h3>GENDER</h3>
+                        <input type="radio" id="female" name="female">
+                        <label  for="female">FELAME</label>
+                        <br>
+            
+                        <input type="radio" id="male" name="male">
+                        <label for="male">MALE</label>
+            
+                </div>
+                <div>
+                    <label for="file">Attach your Resume</label>
+                    <input type="file" id="file" name="file">
+                </div>  
+                <br>
+                <div>
+                    <h12>Select the nationality</h12>
+                    <select>
+                        <option>-select-</option>
+                        <option>Finland</option>
+                        <option>Estonia</option>
+                        <option>Sweeden</option>
+                        <option>Norway</option>
+                        <option>Denmark</option>
+            
+                    </select>
+                </div>
+            
+                <div>
+                    <label for="motivation">motivation</label>
+            
+                    <textarea 
+                    id="motivation" name="motivation" 
+                    value="Write something" rows="20" cols="100" required> 
+            
+                    </textarea>
+                </div>
+            
+                <div>
+                    <input type="submit" value="submit">
+                </div>
+            </form> 
+
+</fieldset>
+
+</body>
+</html>
