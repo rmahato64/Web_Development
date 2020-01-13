@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .flex-container>div {
+            width: 80%;
+            background: gray;
+            margin: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='flex-container'>
+        <button type="text" name="copy" >COPY</button>
+    </div>
+    <input type="text" name="mass" placeholder="mass" id="mass"/>
+    <input type="text" name="gravity" placeholder="gravity" id="gravity"/>
+    <button>Click Me</button>
+    <p id="weight" ></p>
+
+
+
+    <script>
+
+        const button = document.querySelector('button')
+        //const gravity = 9.81
+        const massInput = document.querySelector('#mass')
+        console.log(mass)
+
+        const weightInput = document.querySelector('#weight')
+        console.log(button)
+
+        button.addEventListener('click',function(){
+           // alert(`Your weight is ${60*gravity}`)
+            //weight.textContent = 60 * gravity
+            //console.log('buttom clicked')
+            //console.log(massInput.value)
+        
+
+
+        })
+
+        const numbers = [1, 2, 3, 4, 5, 6]
+        const flexContainer = document.querySelector('.flex-container')
+
+        const generateHexaColor = () => {
+            let string = '0123456789abcdef'
+            
+            let hexaColor = '#'
+            for (let i = 0; i < 6; i++) {
+                let index = Math.floor(Math.random() * string.length)
+                hexaColor += string[index]
+            }
+            return hexaColor
+
+        }
+
+        console.log(generateHexaColor())
+        console.log("=============")
+
+        for (let i = 1; i < 10; i++) {
+            const title = document.createElement('h1')
+            const div = document.createElement('div')
+            title.textContent = generateHexaColor()
+            title.setAttribute('href', 'https://github.com/Asabeneh/JavaScript-for-Everyone')
+            div.setAttribute('class', 'num')
+            div.setAttribute('id', 'num-' + i)
+            div.style.border = '1px solid #999'
+            if (i % 2 == 0) {
+                div.style.background = generateHexaColor()
+            } else {
+                div.style.background = generateHexaColor()
+            }
+
+            div.appendChild(title)
+            flexContainer.append(div)
+        }
+
+        // events are: click, onmouse, onhover, input
+
+        // onclick
+    </script>
+</body>
+
+</html>

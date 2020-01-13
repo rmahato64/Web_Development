@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css">
+    
+    <title>HexaDecimal Generator</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+        .main-div{
+            width: 80%;
+            margin: auto;
+            background-color: rgb(241, 162, 153);
+            border-radius: 5px;
+        }
+        .button-div{
+            width: 40%;
+            margin: auto;
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <div class="main-div" >
+        <h3>Hexadecimal Color Generator</h3>
+        <div class="button-div">
+            <input type="text" class="number" placeholder="Enter a number greater than 5 ...">
+            <button type="text" class="generate">Generate</button>
+            <button type="text" class="stop">Stop</button>
+
+        </div>
+       
+        <p>Colors change people emotions so put meaningful colors on your site.</p>
+    </div>
+    <div class="flex-container">
+        <button type="text" class="copy">Copy</button>
+    </div>
+
+
+    <script>
+        const mainDiv = document.querySelector('.main-div')
+        const generateButton = document.querySelector('.generate')
+        const stoppButton = document.querySelector('.stop')
+
+        const generateHexaColor = () => {
+            let string = '0123456789abcdef'
+            
+            let hexaColor = '#'
+            for (let i = 0; i < 6; i++) {
+                let index = Math.floor(Math.random() * string.length)
+                hexaColor += string[index]
+            }
+            return hexaColor
+
+        }
+
+        console.log(generateHexaColor())
+        console.log("=============")
+
+
+
+    
+    
+    </script>
+    
+</body>
+</html>

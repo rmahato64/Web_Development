@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Div color by hexadecimal number</title>
+    <link href="colorChange.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .flex-container >div{
+            width: 80%;
+            background: red;
+
+        }
+
+    </style>
+ 
+</head>
+<body>
+   
+    <div class="flex-container">
+        <div class="divv"></div>
+        <h1 class="main-heading">Hexadecimal Color Generator</h1>
+        <button type="text" class="copy-button">Copy</button>
+    </div>
+    <script>
+        const division = document.createElement("div")
+        //division.textContent = 'This is div'
+        //document.body.append(division)
+        const flexdiv =document.querySelector(".flex-container") 
+        flexdiv.appendChild(division)
+
+        const button = document.querySelector('.copy-button')
+        button.addEventListener('click', (e) =>{
+            console.log(e.keyCode)
+        })
+
+
+        const numbers = [10,20,30,40,50]
+        const divv = document.querySelector('.divv')
+        for(const element of numbers){
+            let h1 = document.createElement('h1')
+            h1.textContent = element
+            divv.appendChild(h1)
+            console.log(element)
+        }
+        </script>
+</body>
+</html>

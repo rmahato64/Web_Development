@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script>
+       // run this function when the document is loaded
+       window.onload = function() {
+
+         // create a couple of elements in an otherwise empty HTML page
+         const head = document.createElement("h1");
+         const para = document.createElement("p")
+         para.textContent = 'This is paragraph'
+         console.log(para)
+         alert(para[0])
+         head.textContent = 'This is heading first'
+         document.body.append(para)
+         //heading.appendChild(heading_text);
+         document.body.append(head);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
