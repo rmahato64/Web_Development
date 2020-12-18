@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #000;
+}
+
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media screen and (min-width: 768px) {
+  .header li {
+    float: left;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="" class="logo">Your Logo</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+          <li><a href="#work">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#careers">Blog</a></li>
+          <li><a href="#contact">Portfolio</a></li>
+        </ul>
+      </header>
+      <div class="wrapper">
+        <h1>The Finnish Biomedical Imaging Node</h1>
+        <p>
+          The Finnish Biomedical Imaging Node (FiBI) is a Euro-BioImaging Node
+          in Finland that is a multimodal and multi-sited research
+          infrastructure. It specializes in providing in vivo imaging
+          technologies and services accessible in Espoo, Helsinki, Kuopio, and
+          Turku. The open access services of the Finnish Biomedical Imaging Node
+          are open to national and international academic and industrial users.
+          The spearhead imaging modalities of the Finnish Biomedical Imaging
+          Node include preclinical and clinical positron emission tomography
+          (PET), preclinical high-field magnetic resonance imaging (MRI),
+          magnetoencephalography (MEG), and preclinical optical intravital
+          imaging.<br />
+          <strong>Contact:</strong>Contact-FiBI@eurobioimaging.fi
+        </p>
+        <h4>Turku PET Centre</h4>
+        <p>
+          Turku PET Centre is one of the key players in the field of PET, MR,
+          and CT imaging globally. It is jointly owned by three hosts,
+          University of Turku, Åbo Akademi University, and Turku University
+          Hospital. Turku PET Centre is a national centre that provides
+          diagnostic services for patients, conducts basic and applied
+          multidisciplinary research, and offers contract research services for
+          pharmaceutical and other healthcare industry. Turku PET Centre offers
+          state-of-the art PET imaging facilities and expertise for both human
+          and animal studies with a broad repository of PET tracers for various
+          targets, providing opportunities for truly translational research.<a
+            href="http://www.pet.fi"
+            target="_blank"
+            >http://www.pet.fi</a
+          >
+        </p>
+        <h4>Kuopio Biomedical Imaging Unit</h4>
+        <p>
+          Kuopio Biomedical Imaging Unit is a national centre for preclinical
+          MRI in Finland. It provides cutting-edge facilities for small animal
+          in vivo imaging and ex vivo MRI microscopy in different areas of basic
+          and applied research. The strength of Kuopio Biomedical Imaging Unit
+          is international level small animal MRI and strong combination of
+          different imaging modalities together with the excellent quality and
+          variety of different animal models, biotechnology and contrast
+          molecule synthesis found at the University of Eastern Finland.<a
+            href="https://uef.fi/kuopiobiu/"
+            target="_blank"
+            >https://uef.fi/kuopiobiu/</a
+          >
+        </p>
+
+        <h4>NEUROIMAGING Research Infrastructure</h4>
+        <p>
+          NEUROIMAGING Research Infrastructure is a joint consortium of Aalto
+          University human neuroimaging facilities and Helsinki University
+          Hospital BioMag Laboratory. NEUROIMAGING Research Infrastructure sites
+          are world-recognized pioneers and developers of magnetoencephalography
+          (MEG) since the early 1980’s, ranging from instrumentation to analysis
+          methods, and from basic research to MEG’s first clinical applications.
+          NEUROIMAGING Research Infrastructure serves as a hub for MEG training,
+          research, and education nationally and internationally.<a
+            href="http://neuroimaging.fi"
+            target="_blank"
+            >http://neuroimaging.fi</a
+          >
+        </p>
+        <h4>Helsinki in vivo Animal Imaging Platform</h4>
+        <p>
+          Helsinki in vivo Animal Imaging Platform at University of Helsinki
+          offers diverse opportunities for multimodal imaging, including
+          intravital imaging, whole-body optical imaging, ultrasound, in vivo
+          µCT, and electrophysiology and behavioral measurement technologies
+          under one roof in the Biomedicum Helsinki Research Center. It has
+          excellent animal housing and tissue preparation facilities and
+          additional research space for cell culture and tissue staining is also
+          available. In addition, it hosts radiopharmaceutical chemistry and
+          small animal SPECT/CT research facilities, and provides custom
+          radiosynthesis of small molecule receptor ligands, biopharmaceuticals
+          and nanomaterials based on user needs.<a
+            href="https://www.helsinki.fi/en/infrastructures/helsinki-in-vivo-animal-imaging"
+            target="_blank"
+            >https://www.helsinki.fi/en/infrastructures/helsinki-in-vivo-animal-imaging</a
+          >
+        </p>
+      </div>
+      <footer class="footer">
+        <p>Finland Euro-bioimaging @2020</p>
+        <p>Contact <a href="mailto:Contact-FiBI@eurobioimaging.fi"></a></p>
+      </footer>
+    </div>
+</body>
+</html>
